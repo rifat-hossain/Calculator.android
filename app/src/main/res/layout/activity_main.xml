@@ -23,18 +23,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
+            android:gravity="right"
             android:text="0"
             android:textSize="25sp"
             tools:ignore="RtlHardcoded" />
 
         <TextView
             android:id="@+id/digit"
-            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:text="0"
+            android:textColor="@color/black"
             android:textSize="45sp"
+            android:gravity="right"
             tools:ignore="RtlHardcoded" />
     </LinearLayout>
 

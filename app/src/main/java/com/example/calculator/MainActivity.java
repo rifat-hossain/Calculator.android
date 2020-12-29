@@ -98,24 +98,22 @@ public class MainActivity extends AppCompatActivity {
 
     public void equal(View view) {
         TextView digit = findViewById(R.id.digit);
-        ro = Float.parseFloat(digit.getText().toString());
-        operate();
+        if(opa != '\0') {
+            ro = Float.parseFloat(digit.getText().toString());
+            operate();
+        }
     }
     private void opas(char o){
         TextView digit = findViewById(R.id.digit);
-        //doted = false;
-        if(opa == '\0') {
-            opa = o;
-            lo = Float.parseFloat(digit.getText().toString());
-            digit.setText("0");
-            display("");
-        }
-        else{
+        if(opa != '\0'){
             ro = Float.parseFloat(digit.getText().toString());
             operate();
-            opa = o;
-            opas(o);
         }
+        opa = o;
+        lo = Float.parseFloat(digit.getText().toString());
+        ro = 0;
+        digit.setText("0");
+        display("");
     }
     @SuppressLint("SetTextI18n")
     private void operate(){
